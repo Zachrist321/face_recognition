@@ -1,0 +1,127 @@
+\documentclass[10pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[letterpaper, top=0.6in, bottom=0.6in, left=0.6in, right=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{charter}
+\usepackage{microtype}
+
+% Color Definitions - Sleek Dark Navy & Slate
+\definecolor{primary}{RGB}{20, 50, 110} 
+\definecolor{text}{RGB}{30, 30, 30}
+\definecolor{linkcolor}{RGB}{20, 50, 110}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    filecolor=linkcolor,
+    urlcolor=linkcolor,
+    pdfauthor={Zerihun Ayele Chala},
+    pdftitle={Zerihun Ayele Chala - Resume}
+}
+
+% Clean Academic Formatting
+\titleformat{\section}{\large\bfseries\color{primary}\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{6pt}
+
+% Custom list spacing for tight, professional layout
+\setlist[itemize]{leftmargin=0.15in, itemsep=2.5pt, parsep=1pt, topsep=2pt, partopsep=0pt}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\Huge \textbf{\color{primary} Zerihun Ayele Chala}} \\
+    \vspace{6pt}
+    \small
+    Addis Ababa, Ethiopia \ | \ 
+    \href{mailto:zachrist80@gmail.com}{zachrist80@gmail.com} \ | \ 
+    \href{https://www.linkedin.com/in/zerihun-ayele-chala}{linkedin.com/in/zerihun-ayele-chala}
+\end{center}
+
+\vspace{-4pt}
+
+% --- PROFESSIONAL SUMMARY ---
+\section{Professional Summary}
+Computational researcher and deep learning engineer with a rigorous mathematical foundation in dynamical systems, statistical mechanics, and high-dimensional optimization. Specializes in framing deep architectures through a statistical lens—interpreting neural networks as continuous-time dynamical systems, analyzing gradient flow via spectral properties of Jacobians/Hessians, and modeling learning dynamics under probabilistic constraints. Expert in Scientific Machine Learning (SciML) and high-performance computation (C++, JAX, CUDA, PyTorch), with a proven track record of bridging continuum mechanics, control theory, and biophysical neuroscience with modern generative and sequence modeling paradigms.
+
+% --- EDUCATION ---
+\section{Education}
+\textbf{Addis Ababa University} \hfill \textbf{Oct 2025 -- Present} \\
+\textit{MSc in Artificial Intelligence} \hfill \textbf{Cumulative Status: Year 1 Completed (Jun 2026)} \\
+Research focus: Mathematical modeling of neural dynamics, Scientific Machine Learning (SciML), and Neural ODEs.
+
+\vspace{6pt}
+\textbf{Addis Ababa University} \hfill \textbf{Sep 2015 -- Dec 2020} \\
+\textit{BSc in Mechanical Engineering} \hfill \textbf{University Gold Medalist (Ranked 1st/Cohort)} \\
+\textbf{GPA: 3.83/4.00 (Very Great Distinction)}. A 5-year rigorous curriculum establishing a deep foundation in Multivariable Calculus, Linear Algebra, Complex Analysis, and Non-linear Differential Equations. Advanced focus on Continuum Mechanics, Fluid Dynamics (Navier-Stokes), and Control Theory.
+
+% --- TECHNICAL & SCIENTIFIC EXPERTISE ---
+\section{Computational \& Mathematical Mastery}
+\begin{itemize}
+    \item \textbf{Mathematical Foundations:} Dynamical Systems, Stochastic Calculus, PDE/ODE Solvers, Jacobian/Hessian Spectral Analysis, Convex \& Non-Convex Optimization, Statistical Mechanics, and Information Theory.
+    \item \textbf{Deep Learning \& Statistical Inference:} Generative Modeling (Diffusion, VAEs, GANs), Sequence Models (State-Space Models, Transformers), Physics-Informed Neural Networks (PINNs), Variational Inference, and Bayesian Neural Networks.
+    \item \textbf{Programming \& Systems:} Advanced C++ (C++17/20, OOP, memory management, multithreading), Python (NumPy, SciPy, PyTorch, JAX, Equinox), CUDA, MATLAB/Simulink, Git, and Linux environments.
+    \item \textbf{Biophysical Neuroscience:} Hodgkin-Huxley model, Synaptic Gating Kinetics, Cable Theory, Synaptic Plasticity (STDP, LTP/LTD), and Computational Modeling of Cortical Circuits.
+\end{itemize}
+
+% --- ACADEMIC EXPERIENCE ---
+\section{Academic Leadership}
+\textbf{Mizan-Tepi University} \hfill \textbf{Mar 2021 -- Feb 2025} \\
+\textit{Lecturer in Computational Engineering \& Numerical Methods}
+\begin{itemize}
+    \item Instructed 100+ undergraduate students on numerical methods, focusing on the translation of high-dimensional calculus, numerical linear algebra, and differential equations into optimized, executable code in C++ and Python.
+    \item Taught core courses in Algorithms \& Data Structures, emphasizing memory management, computational complexity (Big-O analysis), and cache-efficient algorithm design for scientific computing.
+    \item Developed rigorous curriculum and hands-on laboratory exercises for numerical integration (Runge-Kutta, Gaussian quadrature) and matrix decomposition algorithms (LU, QR, Cholesky, and SVD).
+\end{itemize}
+
+\newpage
+
+% --- RESEARCH & ALGORITHMIC IMPLEMENTATIONS ---
+\section{Selected Implementations \& Research Projects}
+
+\textbf{High-Performance C++/CUDA Tensor \& Automatic Differentiation Engine} 
+\begin{itemize}
+    \item Engineered a modular, high-performance C++/CUDA tensor library and reverse-mode automatic differentiation engine from scratch without relying on high-level deep learning frameworks.
+    \item Designed an execution graph structure (DAG) with tape-based gradient tracking and implemented custom memory pools to optimize tensor reuse, reducing GPU memory fragmentation.
+    \item Wrote and optimized custom CUDA kernels for element-wise operations, activations, and tiled General Matrix Multiplication (GEMM) using shared memory, achieving execution speeds matching standard libraries for small-to-medium batch sizes.
+    \item Exposed C++ internals to Python using PyBind11, enabling seamless prototyping and validation against PyTorch.
+\end{itemize}
+
+\textbf{Scientific Machine Learning: Physics-Informed Fourier Neural Operators (PINO) for Fluid Dynamics}
+\begin{itemize}
+    \item Engineered a Physics-Informed Fourier Neural Operator (PINO) in JAX to solve the 2D/3D Navier-Stokes equations for incompressible fluid flows under complex boundary conditions.
+    \item Vectorized continuous PDE residuals using automatic differentiation, incorporating them directly into the loss function to act as a soft physical constraint.
+    \item Achieved up to 100x acceleration in simulation speed compared to classical Finite Element Method (FEM) solvers, while maintaining physical consistency (mass and momentum conservation) within a 0.5\% error margin.
+    \item Leveraged parallel JAX scans and multi-GPU compilation (\texttt{jit}/\texttt{pmap}) to handle high-dimensional spatial grids.
+\end{itemize}
+
+\textbf{Stochastic Generative Modeling: Score-Based Diffusion Models via Continuous-Time SDEs}
+\begin{itemize}
+    \item Developed a Denoising Diffusion Probabilistic Model (DDPM) framed through continuous-time Stochastic Differential Equations (SDEs), utilizing the Variance Preserving (VP) and Variance Exploding (VE) formulations.
+    \item Trained score networks in PyTorch to estimate the score function of high-dimensional data distributions, utilizing sliced score matching and denoising score matching.
+    \item Implemented numerical solvers for the reverse-time Ito SDE (Euler-Maruyama) and the deterministic Probability Flow ODE (Runge-Kutta 4th Order), enabling exact likelihood computation and high-fidelity sampling.
+    \item Investigated the connection between stochastic dynamics, entropy production, and sampling efficiency across different temperature schedules.
+\end{itemize}
+
+\textbf{Sequence Modeling \& Control: Hardware-Aware Structured State-Space Models (S4/Mamba) from Scratch}
+\begin{itemize}
+    \item Implemented a Structured State-Space (S4) sequence model in JAX, establishing an explicit mathematical mapping between classical control theory state-space representations and modern sequence learning.
+    \item Designed and optimized a parallel associative scan in JAX to bypass sequential recurrence bottlenecks, achieving $O(\log N)$ parallel computation over sequences of length $N$.
+    \item Formulated discrete-time state transitions from continuous-time matrices via bilinear (Tustin) and Zero-Order Hold (ZOH) transformations, analyzing their stability and spectral properties.
+    \item Validated the model on the Long Range Arena (LRA) benchmark, demonstrating superior memory capacity and linear scaling relative to standard self-attention mechanisms.
+\end{itemize}
+
+% --- SELECTED HONORS & CERTIFICATIONS ---
+\section{Selected Honors \& Certifications}
+\begin{itemize}
+    \item \textbf{Synapses, Neurons and Brains (Hebrew University of Jerusalem):} Intensive specialization in the biophysics of neurons, synaptic transmission, and the computational logic of neural circuits.
+    \item \textbf{University Gold Medal (2020):} Highest academic honor, awarded to the top-ranking student in the Mechanical Engineering Department (Ranked 1st out of cohort).
+    \item \textbf{Deep Learning Specialization (DeepLearning.AI):} Comprehensive mastery of Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and Sequence Models.
+    \item \textbf{Distinguished Lecturer Award (2023):} Recognized for excellence, clarity, and innovation in teaching technical computational engineering subjects.
+\end{itemize}
+
+\end{document}
